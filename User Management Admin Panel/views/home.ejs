@@ -1,0 +1,64 @@
+<%- include("partials/header.ejs") %>
+
+<!-- Hero Section -->
+<div class="text-center mb-5">
+    <h1 class="fw-bold mb-3">
+      Welcome to <span class="text-success">User Management App</span>
+    </h1>
+    <p class="text-muted fs-5">
+      Manage users, roles, and permissions easily with a clean and secure system.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="/register" class="btn btn-success btn-lg">
+        <i class="bi bi-person-plus me-1"></i> Get Started
+      </a>
+      <a href="/login" class="btn btn-outline-secondary btn-lg">
+        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+      </a>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-people fs-1 text-success mb-3"></i>
+          <h5 class="card-title fw-semibold">User Management</h5>
+          <p class="card-text text-muted">
+            Create, update, view, and delete users with ease.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-shield-lock fs-1 text-success mb-3"></i>
+          <h5 class="card-title fw-semibold">Secure Access</h5>
+          <p class="card-text text-muted">
+            Authentication and authorization to protect user data.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-gear fs-1 text-success mb-3"></i>
+          <h5 class="card-title fw-semibold">Easy Settings</h5>
+          <p class="card-text text-muted">
+            Manage roles, preferences, and system settings smoothly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,107 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5">
+
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">About User Management App</h1>
+      <p class="text-muted fs-5">
+        A simple, secure, and scalable system for managing users and administrators
+      </p>
+    </div>
+  
+    <!-- About Content -->
+    <div class="row g-4">
+  
+      <!-- What is this app -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold mb-3">
+              <i class="bi bi-info-circle text-primary me-2"></i>
+              What is this application?
+            </h4>
+            <p class="card-text text-muted">
+              The <strong>User Management App</strong> is a web-based system designed
+              to help manage users, roles, permissions, and account settings in a
+              structured and secure way.
+            </p>
+            <p class="card-text text-muted">
+              It supports both <strong>regular users</strong> and
+              <strong>administrators</strong>, providing role-based access and control.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Features -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold mb-3">
+              <i class="bi bi-stars text-success me-2"></i>
+              Key Features
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">User registration & authentication</li>
+              <li class="list-group-item">Role-based access (User / Admin)</li>
+              <li class="list-group-item">Profile and account management</li>
+              <li class="list-group-item">Theme preferences (Light / Dark)</li>
+              <li class="list-group-item">Admin dashboard & user controls</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Technologies -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold mb-3">
+              <i class="bi bi-code-slash text-warning me-2"></i>
+              Technologies Used
+            </h4>
+            <ul class="list-unstyled text-muted">
+              <li>• Node.js & Express.js</li>
+              <li>• EJS Template Engine</li>
+              <li>• PostgreSQL Database</li>
+              <li>• Bootstrap 5 UI Framework</li>
+              <li>• Secure authentication & sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Purpose -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold mb-3">
+              <i class="bi bi-bullseye text-danger me-2"></i>
+              Purpose & Goals
+            </h4>
+            <p class="card-text text-muted">
+              This project is built to demonstrate best practices in web development,
+              including clean UI design, security awareness, and scalable architecture.
+            </p>
+            <p class="card-text text-muted">
+              It can be used as a foundation for real-world systems such as dashboards,
+              internal tools, or SaaS platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Footer Note -->
+    <div class="text-center mt-5">
+      <p class="text-muted">
+        © <%= new Date().getFullYear() %> User Management App · Built with ❤️
+      </p>
+    </div>
+  
+  </div>
+  
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,118 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="d-flex flex-column flex-lg-row min-vh-100 p-4">
+
+  <!-- Admin Sidebar -->
+  <nav
+    class="bg-body shadow-sm border rounded-3 p-4 me-4 flex-shrink-0"
+    style="min-width: 240px; height: fit-content;"
+  >
+    <h5 class="fw-bold mb-4 text-center text-danger">Admin Panel</h5>
+
+    <div class="d-grid gap-3">
+      <a href="/admin/dashboard"
+         class="btn btn-outline-secondary d-flex align-items-center justify-content-start fw-semibold rounded-3 shadow-sm">
+        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+      </a>
+
+      <a href="/admin/users"
+         class="btn btn-outline-primary d-flex align-items-center justify-content-start fw-semibold rounded-3 shadow-sm">
+        <i class="bi bi-people me-2"></i> Users
+      </a>
+
+      <a href="/admin/settings"
+         class="btn btn-outline-warning d-flex align-items-center justify-content-start fw-semibold rounded-3 shadow-sm">
+        <i class="bi bi-gear me-2"></i> Admin Settings
+      </a>
+
+      <a href="/log-out"
+         class="btn btn-outline-danger d-flex align-items-center justify-content-start fw-semibold rounded-3 shadow-sm mt-3">
+        <i class="bi bi-box-arrow-right me-2"></i> Logout
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1">
+    <h1 class="mb-4">Admin Settings</h1>
+
+    <!-- Admin Profile -->
+    <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+      <h4 class="mb-3">Admin Profile</h4>
+
+      <form action="/admin-update-profile" method="get">
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Username (Read Only)</label>
+          <input type="text" class="form-control" value="<%= user.user_name %>" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Email (Read Only)</label>
+          <input type="email" class="form-control" value="<%= user.email %>" readonly>
+        </div>
+
+        <button type="submit" class="btn btn-primary rounded-3 shadow-sm">
+          <i class="bi bi-pencil-square me-2"></i> Update Profile
+        </button>
+      </form>
+    </div>
+
+    <!-- Account Information -->
+    <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+      <h4 class="mb-3">Account Information</h4>
+
+      <p><strong>Role:</strong> <%= user.role %></p>
+      <p>
+        <strong>Status:</strong>
+        <% if (user.is_active) { %>
+          <span class="badge bg-success">Active</span>
+        <% } else { %>
+          <span class="badge bg-danger">Disabled</span>
+        <% } %>
+      </p>
+      <p><strong>Account Created:</strong> <%= new Date(user.created_at).toLocaleString() %></p>
+      <p><strong>Last Updated:</strong> <%= new Date(user.updated_at).toLocaleString() %></p>
+    </div>
+
+    <!-- Security Information -->
+    <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+      <h4 class="mb-3">Security Information</h4>
+
+      <p><strong>Password:</strong> ********</p>
+      <p><strong>Last Login:</strong> Not tracked</p>
+    </div>
+
+    <!-- Preferences -->
+    <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+      <h4 class="mb-3">Preferences</h4>
+
+      <form action="/settings/preferences" method="POST">
+        <div class="mb-3">
+          <label for="themeSelect" class="form-label fw-semibold">Theme</label>
+          <select name="theme" id="themeSelect" class="form-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm rounded-3 shadow-sm">
+          <i class="bi bi-check-lg me-2"></i> Save Preferences
+        </button>
+      </form>
+    </div>
+
+    <!-- System Access -->
+    <div class="card shadow-sm border-0 rounded-3 p-4">
+      <h4 class="mb-3">System Access</h4>
+      <ul class="mb-0">
+        <li>Admin Panel Access: <strong>Yes</strong></li>
+        <li>User Management: <strong>Enabled</strong></li>
+        <li>Settings Control: <strong>Enabled</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<%- include("../partials/footer.ejs") %>

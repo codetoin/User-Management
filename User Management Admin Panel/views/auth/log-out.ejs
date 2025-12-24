@@ -1,0 +1,53 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h3 class="card-title mb-4 text-center">Log Out</h3>
+
+        <form action="/log-out" method="post" class="needs-validation" novalidate>
+          
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input 
+              type="email" 
+              name="email" 
+              id="email" 
+              class="form-control" 
+              placeholder="Enter your email" 
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              class="form-control" 
+              placeholder="Enter your password" 
+              required
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success btn-lg fw-semibold rounded-3 shadow-sm">
+              <i class="bi bi-box-arrow-right me-2"></i> Log Out
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

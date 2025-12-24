@@ -1,0 +1,83 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h3 class="card-title mb-4 text-center">Register</h3>
+
+        <form action="/register" method="post" class="needs-validation" novalidate>
+          
+          <!-- Username -->
+          <div class="mb-3">
+            <label for="name" class="form-label">User Name</label>
+            <input 
+              type="text" 
+              name="name" 
+              id="name" 
+              class="form-control" 
+              placeholder="Enter your username" 
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input 
+              type="email" 
+              name="email" 
+              id="email" 
+              class="form-control" 
+              placeholder="Enter your email" 
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              class="form-control" 
+              placeholder="Enter your password" 
+              required
+            />
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="mb-4">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input 
+              type="password" 
+              name="confirmPassword" 
+              id="confirmPassword" 
+              class="form-control" 
+              placeholder="Re-enter your password" 
+              required
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success btn-lg fw-semibold rounded-3 shadow-sm">
+              <i class="bi bi-person-plus me-2"></i> Register
+            </button>
+          </div>
+
+        </form>
+
+        <p class="text-center mt-3 text-muted small">
+          Already have an account? <a href="/login" class="text-decoration-none">Login</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>
